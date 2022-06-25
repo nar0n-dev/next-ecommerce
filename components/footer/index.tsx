@@ -6,9 +6,11 @@ const Footer = () => {
       <div className="container">
         <div className="site-footer__top">
           <div className="site-footer__description">
-            <h6><Logo /> <span>JS </span>Store</h6>
-            <p>House My Brand designs clothing for the young, the old & everyone in between – but most
-              importantly, for the fashionable</p>
+            <h6>
+              <Logo />
+              {/* <span>JS </span> Store*/}
+            </h6>
+            <p></p>
             <ul className="site-footer__social-networks">
               <li><a href="#"><i className="icon-facebook"></i></a></li>
               <li><a href="#"><i className="icon-instagram"></i></a></li>
@@ -17,21 +19,13 @@ const Footer = () => {
 
           <div className="site-footer__links">
             <ul>
-              <li>Shopping online</li>
-              <li><a href="#">Order Status</a></li>
-              <li><a href="#">Shipping and Delivery</a></li>
-              <li><a href="#">Returns</a></li>
-              <li><a href="#">Payment options</a></li>
-              <li><a href="#">Contact Us</a></li>
+              <li>Ajuda</li>
+              <li><a href="#">Suporte</a></li>
             </ul>
 
             <ul>
               <li>Informações</li>
-              <li><a href="#">Gift Cards</a></li>
-              <li><a href="#">Find a store</a></li>
               <li><a href="#">Newsletter</a></li>
-              <li><a href="#">Bacome a member</a></li>
-              <li><a href="#">Site feedback</a></li>
             </ul>
 
             <ul>
