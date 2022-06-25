@@ -16,7 +16,7 @@ const Gallery = ({ images }: GalleryProductType) => {
       <div className="product-gallery__thumbs">
         {images.map((image, index) => (
           <div key={index} className="product-gallery__thumb" >
-            <img src={image} alt="" onClick={(e) => selectedImage(index)} />
+            <img src={image} alt="" onClick={() => selectedImage(index)} />
           </div>
         ))}
       </div>
