@@ -27,14 +27,14 @@ const Content = ({ product }: ProductContent) => {
 
   const toggleFav = () => {
     dispatch(toggleFavProduct(
-      { 
+      {
         id: product.id,
       }
     ))
   }
 
   const addToCart = () => {
-    const productToSave: ProductStoreType = { 
+    const productToSave: ProductStoreType = {
       id: product.id,
       name: product.name,
       thumb: product.images ? product.images[0] : '',
@@ -56,39 +56,39 @@ const Content = ({ product }: ProductContent) => {
     <section className="product-content">
       <div className="product-content__intro">
         <h5 className="product__id">Product ID:<br></br>{product.id}</h5>
-        <span className="product-on-sale">Sale</span>
+        <span className="product-on-sale">Oferta</span>
         <h2 className="product__name">{product.name}</h2>
 
         <div className="product__prices">
-          <h4>${ product.currentPrice }</h4>
+          <h4>R${product.currentPrice}</h4>
           {product.discount &&
-            <span>${ product.price }</span>
+            <span>R${product.price}</span>
           }
         </div>
       </div>
 
       <div className="product-content__filters">
         <div className="product-filter-item">
-          <h5>Color:</h5>
+          <h5>Cor:</h5>
           <div className="checkbox-color-wrapper">
             {productsColors.map(type => (
-              <CheckboxColor 
-                key={type.id} 
-                type={'radio'} 
-                name="product-color" 
+              <CheckboxColor
+                key={type.id}
+                type={'radio'}
+                name="product-color"
                 color={type.color}
                 valueName={type.label}
-                onChange={onColorSet} 
+                onChange={onColorSet}
               />
             ))}
           </div>
         </div>
         <div className="product-filter-item">
-          <h5>Size: <strong>See size table</strong></h5>
+          <h5>Tamanhos: <strong>veja os tamanhos abaixo</strong></h5>
           <div className="checkbox-color-wrapper">
             <div className="select-wrapper">
               <select onChange={onSelectChange}>
-                <option>Choose size</option>
+                <option>Selecione o Tamanho</option>
                 {productsSizes.map(type => (
                   <option value={type.label}>{type.label}</option>
                 ))}
@@ -97,7 +97,7 @@ const Content = ({ product }: ProductContent) => {
           </div>
         </div>
         <div className="product-filter-item">
-          <h5>Quantity:</h5>
+          <h5>Quantidade:</h5>
           <div className="quantity-buttons">
             <div className="quantity-button">
               <button type="button" onClick={() => setCount(count - 1)} className="quantity-button__btn">
@@ -108,8 +108,8 @@ const Content = ({ product }: ProductContent) => {
                 +
               </button>
             </div>
-            
-            <button type="submit" onClick={() => addToCart()} className="btn btn--rounded btn--yellow">Add to cart</button>
+
+            <button type="submit" onClick={() => addToCart()} className="btn btn--rounded btn--yellow">Adicionar ao Carrinho</button>
             <button type="button" onClick={toggleFav} className={`btn-heart ${isFavourite ? 'btn-heart--active' : ''}`}><i className="icon-heart"></i></button>
           </div>
         </div>
@@ -117,6 +117,5 @@ const Content = ({ product }: ProductContent) => {
     </section>
   );
 };
-  
+
 export default Content;
-    

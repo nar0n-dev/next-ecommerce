@@ -7,20 +7,20 @@ type LayoutType = {
   children?: React.ReactNode;
 }
 
-export default ({ children, title = 'Next.js Ecommerce' }: LayoutType) => {
+export default ({ children, title = 'JS Store - Moda Feminina' }: LayoutType) => {
   const router = useRouter();
   const pathname = router.pathname;
 
   return (
     <div className="app-main">
       <Head>
-        <title>{ title }</title>
+        <title>{title}</title>
       </Head>
 
       <Header />
 
       <main className={(pathname !== '/' ? 'main-page' : '')}>
-        { children }
+        {children}
       </main>
     </div>
   )

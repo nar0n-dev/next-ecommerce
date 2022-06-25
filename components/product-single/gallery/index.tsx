@@ -1,16 +1,22 @@
+import { useState } from "react";
+
 type GalleryProductType = {
   images: string[]
 }
 
 const Gallery = ({ images }: GalleryProductType) => {
-  const featImage = images[0];
+  const [featImage, setFeatImage] = useState(images[0])
+
+  function selectedImage(e: number) {
+    setFeatImage(images[e])
+  }
 
   return (
     <section className="product-gallery">
       <div className="product-gallery__thumbs">
-        {images.map(image => (
-          <div key={image} className="product-gallery__thumb">
-            <img src={image} alt="" />
+        {images.map((image, index) => (
+          <div key={index} className="product-gallery__thumb" >
+            <img src={image} alt="" onClick={(e) => selectedImage(index)} />
           </div>
         ))}
       </div>
@@ -21,6 +27,5 @@ const Gallery = ({ images }: GalleryProductType) => {
     </section>
   );
 };
-  
+
 export default Gallery;
-  

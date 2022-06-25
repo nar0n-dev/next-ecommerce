@@ -10,7 +10,7 @@ const ProductsFeatured = () => {
       <div className="container">
         <header className="section-products-featured__header">
           <h3>Selected just for you</h3>
-          <a href="/products" className="btn btn--rounded btn--border">Show All</a>
+          <a href="/products" className="btn btn--rounded btn--border">Todos</a>
         </header>
 
         <ProductsCarousel products={data} />

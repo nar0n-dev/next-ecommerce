@@ -9,7 +9,7 @@ import Gallery from '../../components/product-single/gallery';
 import Content from '../../components/product-single/content';
 import Description from '../../components/product-single/description';
 import Reviews from '../../components/product-single/reviews';
-import { server } from '../../utils/server'; 
+import { server } from '../../utils/server';
 
 // types
 import { ProductType } from 'types';
@@ -46,8 +46,8 @@ const Product = ({ product }: ProductPageType) => {
 
           <div className="product-single__info">
             <div className="product-single__info-btns">
-              <button type="button" onClick={() => setShowBlock('description')} className={`btn btn--rounded ${showBlock === 'description' ? 'btn--active' : ''}`}>Description</button>
-              <button type="button" onClick={() => setShowBlock('reviews')} className={`btn btn--rounded ${showBlock === 'reviews' ? 'btn--active' : ''}`}>Reviews (2)</button>
+              <button type="button" onClick={() => setShowBlock('description')} className={`btn btn--rounded ${showBlock === 'description' ? 'btn--active' : ''}`}>Descrição</button>
+              <button type="button" onClick={() => setShowBlock('reviews')} className={`btn btn--rounded ${showBlock === 'reviews' ? 'btn--active' : ''}`}>Avaliações (2)</button>
             </div>
 
             <Description show={showBlock === 'description'} />
