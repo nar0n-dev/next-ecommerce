@@ -12,15 +12,15 @@ const Footer = () => {
             </h6>
             <p></p>
             <ul className="site-footer__social-networks">
-              <li><a href="#"><i className="icon-facebook"></i></a></li>
-              <li><a href="#"><i className="icon-instagram"></i></a></li>
+              <li><a href="https://www.facebook.com/Js-Store-101822072102770"><i className="icon-facebook"></i></a></li>
+              <li><a href="https://www.instagram.com/js.storesp/"><i className="icon-instagram"></i></a></li>
             </ul>
           </div>
 
           <div className="site-footer__links">
             <ul>
               <li>Ajuda</li>
-              <li><a href="#">Suporte</a></li>
+              <li><a href="https://wa.me/5519984520307">Suporte</a></li>
             </ul>
 
             <ul>
@@ -30,8 +30,9 @@ const Footer = () => {
 
             <ul>
               <li>Contato</li>
-              <li><a href="#">jessicacsantos10@hotmail.com</a></li>
-              <li><a href="#">WhatsApp: (19) 00000-0000</a></li>
+              <li><a href="mailto:jessicacsantos10@hotmail.com">jessicacsantos10@hotmail.com</a></li>
+              <li><a href="https://wa.me/5519984520307">
+                WhatsApp: (19) 98452-0307</a></li>
             </ul>
           </div>
         </div>
