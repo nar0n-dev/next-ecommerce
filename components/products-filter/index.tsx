@@ -20,48 +20,48 @@ const ProductsFilter = () => {
 
   return (
     <form className="products-filter" onChange={addQueryParams}>
-      <button type="button" 
-        onClick={() => setFiltersOpen(!filtersOpen)} 
+      <button type="button"
+        onClick={() => setFiltersOpen(!filtersOpen)}
         className={`products-filter__menu-btn ${filtersOpen ? 'products-filter__menu-btn--active' : ''}`}>
-          Add Filter <i className="icon-down-open"></i>
+        Add Filtro <i className="icon-down-open"></i>
       </button>
-      
+
       <div className={`products-filter__wrapper ${filtersOpen ? 'products-filter__wrapper--open' : ''}`}>
         <div className="products-filter__block">
-          <button type="button">Product type</button>
+          <button type="button">Categoria</button>
           <div className="products-filter__block__content">
             {productsTypes.map(type => (
-              <Checkbox 
-                key={type.id} 
-                name="product-type" 
-                label={type.name} 
+              <Checkbox
+                key={type.id}
+                name="product-type"
+                label={type.name}
               />
             ))}
           </div>
         </div>
 
         <div className="products-filter__block">
-          <button type="button">Price</button>
+          <button type="button">Preço</button>
           <div className="products-filter__block__content">
             <Range min={0} max={20} defaultValue={[3, 10]} tipFormatter={value => `${value}%`} />
           </div>
         </div>
-        
+
         <div className="products-filter__block">
-          <button type="button">Size</button>
+          <button type="button">Tamanhos</button>
           <div className="products-filter__block__content checkbox-square-wrapper">
             {productsSizes.map(type => (
-              <Checkbox 
-                type="square" 
-                key={type.id} 
-                name="product-size" 
+              <Checkbox
+                type="square"
+                key={type.id}
+                name="product-size"
                 label={type.label} />
             ))}
           </div>
         </div>
-        
+
         <div className="products-filter__block">
-          <button type="button">Color</button>
+          <button type="button">Cor</button>
           <div className="products-filter__block__content">
             <div className="checkbox-color-wrapper">
               {productsColors.map(type => (
@@ -71,11 +71,10 @@ const ProductsFilter = () => {
           </div>
         </div>
 
-        <button type="submit" className="btn btn-submit btn--rounded btn--yellow">Apply</button>
+        <button type="submit" className="btn btn-submit btn--rounded btn--yellow">Aplicar</button>
       </div>
     </form>
   )
 }
-  
+
 export default ProductsFilter
-  
