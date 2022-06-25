@@ -53,8 +53,8 @@ const PageIntro = () => {
             <li>
               <i className="icon-cash"></i>
               <div className="data-item__content">
-                <h4>Originality Guaranteed</h4>
-                <p>30 days warranty for each product from our store</p>
+                <h4>Melhor qualidade</h4>
+                <p>Com os melhores materiais.</p>
               </div>
             </li>
           </ul>
