@@ -11,7 +11,7 @@ const ProductsContent = () => {
         <button type="button" onClick={() => setOrderProductsOpen(!orderProductsOpen)} className="products-filter-btn"><i className="icon-filters"></i></button>
         <form className={`products-content__filter ${orderProductsOpen ? 'products-order-open' : ''}`}>
           <div className="products__filter__select">
-            <h4>Show products: </h4>
+            <h4>Mostrar: </h4>
             <div className="select-wrapper">
               <select>
                 <option>Popular</option>

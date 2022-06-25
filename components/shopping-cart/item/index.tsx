@@ -7,31 +7,31 @@ const ShoppingCart = ({ thumb, name, id, color, size, count, price }: ProductSto
 
   const removeFromCart = () => {
     dispatch(removeProduct(
-      { 
-        thumb, 
-        name, 
-        id, 
-        color, 
-        size, 
-        count, 
+      {
+        thumb,
+        name,
+        id,
+        color,
+        size,
+        count,
         price
       }
     ))
   }
 
   const setProductCount = (count: number) => {
-    if(count <= 0) {
+    if (count <= 0) {
       return;
     }
 
     const payload = {
-      product: { 
-        thumb, 
-        name, 
-        id, 
-        color, 
-        size, 
-        count, 
+      product: {
+        thumb,
+        name,
+        id,
+        color,
+        size,
+        count,
         price
       },
       count,
@@ -61,17 +61,17 @@ const ShoppingCart = ({ thumb, name, id, color, size, count, price }: ProductSto
           <button type="button" onClick={() => setProductCount(count - 1)} className="quantity-button__btn">
             -
           </button>
-          <span>{ count }</span>
+          <span>{count}</span>
           <button type="button" onClick={() => setProductCount(count + 1)} className="quantity-button__btn">
             +
           </button>
         </div>
       </td>
-      <td>${price}</td>
+      <td>R${price}</td>
       <td className="cart-item-cancel"><i className="icon-cancel" onClick={() => removeFromCart()}></i></td>
     </tr>
   )
 };
 
-  
+
 export default ShoppingCart
