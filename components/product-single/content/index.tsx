@@ -19,6 +19,7 @@ const Content = ({ product }: ProductContent) => {
   const [count, setCount] = useState<number>(1);
   const [color, setColor] = useState<string>('');
   const [itemSize, setItemSize] = useState<string>('');
+  console.log(color + itemSize)
 
   const onColorSet = (e: string) => setColor(e);
   const onSelectChange = (e: React.ChangeEvent<HTMLSelectElement>) => setItemSize(e.target.value);
