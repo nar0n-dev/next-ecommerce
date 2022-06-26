@@ -9,7 +9,7 @@ const CheckoutPage = () => {
   const priceTotal = useSelector((state: RootState) => {
     const cartItems = state.cart.cartItems;
     let totalPrice = 0;
-    if(cartItems.length > 0) {
+    if (cartItems.length > 0) {
       cartItems.map(item => totalPrice += item.price * item.count);
     }
 
@@ -44,7 +44,7 @@ const CheckoutPage = () => {
                       <input className="form__input form__input--sm" type="text" placeholder="Address" />
                     </div>
                   </div>
-                  
+
                   <div className="form__input-row form__input-row--two">
                     <div className="form__col">
                       <input className="form__input form__input--sm" type="text" placeholder="First name" />
@@ -54,7 +54,7 @@ const CheckoutPage = () => {
                       <input className="form__input form__input--sm" type="text" placeholder="City" />
                     </div>
                   </div>
-                  
+
                   <div className="form__input-row form__input-row--two">
                     <div className="form__col">
                       <input className="form__input form__input--sm" type="text" placeholder="Last name" />
@@ -74,7 +74,7 @@ const CheckoutPage = () => {
                       <div className="select-wrapper select-form">
                         <select>
                           <option>Country</option>
-                          <option value="Argentina">Argentina</option>
+                          <option value="Brasil">Brasil</option>
                         </select>
                       </div>
                     </div>
@@ -82,7 +82,7 @@ const CheckoutPage = () => {
                 </form>
               </div>
             </div>
-            
+
             <div className="checkout__col-4">
               <div className="block">
                 <h3 className="block__title">Payment method</h3>
@@ -107,45 +107,33 @@ const CheckoutPage = () => {
                   </li>
                 </ul>
               </div>
-              
+
               <div className="block">
                 <h3 className="block__title">Delivery method</h3>
                 <ul className="round-options round-options--two">
                   <li className="round-item round-item--bg">
                     <img src="/images/logos/inpost.svg" alt="Paypal" />
-                    <p>$20.00</p>
-                  </li>
-                  <li className="round-item round-item--bg">
-                    <img src="/images/logos/dpd.svg" alt="Paypal" />
-                    <p>$12.00</p>
-                  </li>
-                  <li className="round-item round-item--bg">
-                    <img src="/images/logos/dhl.svg" alt="Paypal" />
-                    <p>$15.00</p>
-                  </li>
-                  <li className="round-item round-item--bg">
-                    <img src="/images/logos/maestro.png" alt="Paypal" />
-                    <p>$10.00</p>
+                    <p>R$0.00</p>
                   </li>
                 </ul>
               </div>
             </div>
-            
+
             <div className="checkout__col-2">
               <div className="block">
-                <h3 className="block__title">Your cart</h3>
+                <h3 className="block__title">Seu Carrinho</h3>
                 <CheckoutItems />
-                
+
                 <div className="checkout-total">
-                  <p>Total cost</p>
-                  <h3>${priceTotal}</h3>
+                  <p>Total</p>
+                  <h3>R${priceTotal}</h3>
                 </div>
               </div>
             </div>
           </div>
-          
+
           <div className="cart-actions cart-actions--checkout">
-            <a href="/cart" className="cart__btn-back"><i className="icon-left"></i> Back</a>
+            <a href="/cart" className="cart__btn-back"><i className="icon-left"></i> Voltar</a>
             <div className="cart-actions__items-wrapper">
               <button type="button" className="btn btn--rounded btn--border">Continue shopping</button>
               <button type="button" className="btn btn--rounded btn--yellow">Proceed to payment</button>
@@ -157,5 +145,5 @@ const CheckoutPage = () => {
   )
 };
 
-  
+
 export default CheckoutPage
