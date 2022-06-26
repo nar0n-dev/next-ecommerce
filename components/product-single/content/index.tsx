@@ -33,6 +33,10 @@ const Content = ({ product }: ProductContent) => {
     ))
   }
 
+  const addToWhatsApp = () => {
+    window.location.href = (`https://wa.me/5519984520307?text=Ol%C3%A1,%20tudo%20bem?%20Me%20interessei%20por%20este%20produto - ${product.name}`)
+  }
+
   const addToCart = () => {
     const productToSave: ProductStoreType = {
       id: product.id,
@@ -109,7 +113,8 @@ const Content = ({ product }: ProductContent) => {
               </button>
             </div>
 
-            <button type="submit" onClick={() => addToCart()} className="btn btn--rounded btn--yellow">Adicionar ao Carrinho</button>
+            <button type="submit" onClick={() => addToWhatsApp()} className="btn btn--rounded btn--yellow">Solicitar via WhatsApp</button>
+            {/* <button type="submit" onClick={() => addToCart()} className="btn btn--rounded btn--yellow" disabled>Adicionar ao Carrinho</button> */}
             <button type="button" onClick={toggleFav} className={`btn-heart ${isFavourite ? 'btn-heart--active' : ''}`}><i className="icon-heart"></i></button>
           </div>
         </div>
