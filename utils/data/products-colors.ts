@@ -1,8 +1,8 @@
 export const productsColors = [
   {
     id: "1",
-    label: "Black",
-    color: "#000000",
+    label: "Preta",
+    color: "#000",
   },
 ];
 

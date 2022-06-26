@@ -1,14 +1,18 @@
 export const productsSizes = [
   {
     id: "1",
-    label: "P",
+    label: "U",
   },
   {
     id: "2",
-    label: "M",
+    label: "P",
   },
   {
     id: "3",
+    label: "M",
+  },
+  {
+    id: "4",
     label: "G",
   },
 ];
