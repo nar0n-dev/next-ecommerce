@@ -4,7 +4,7 @@ import productsColors from './../../../utils/data/products-colors';
 import CheckboxColor from './../../products-filter/form-builder/checkbox-color';
 import { useDispatch, useSelector } from 'react-redux';
 import { some } from 'lodash';
-import { addProduct } from 'store/reducers/cart';
+// import { addProduct } from 'store/reducers/cart';
 import { toggleFavProduct } from 'store/reducers/user';
 import { ProductType, ProductStoreType } from 'types';
 import { RootState } from 'store';
@@ -37,24 +37,24 @@ const Content = ({ product }: ProductContent) => {
     window.location.href = (`https://wa.me/5519984520307?text=Ol%C3%A1,%20tudo%20bem?%20Me%20interessei%20por%20este%20produto - ${product.name}`)
   }
 
-  const addToCart = () => {
-    const productToSave: ProductStoreType = {
-      id: product.id,
-      name: product.name,
-      thumb: product.images ? product.images[0] : '',
-      price: product.currentPrice,
-      count: count,
-      color: color,
-      size: itemSize
-    }
+  // const addToCart = () => {
+  //   const productToSave: ProductStoreType = {
+  //     id: product.id,
+  //     name: product.name,
+  //     thumb: product.images ? product.images[0] : '',
+  //     price: product.currentPrice,
+  //     count: count,
+  //     color: color,
+  //     size: itemSize
+  //   }
 
-    const productStore = {
-      count,
-      product: productToSave
-    }
+  //   const productStore = {
+  //     count,
+  //     product: productToSave
+  //   }
 
-    dispatch(addProduct(productStore));
-  }
+  //   dispatch(addProduct(productStore));
+  // }
 
   return (
     <section className="product-content">
