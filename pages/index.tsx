@@ -11,21 +11,21 @@ const IndexPage = () => {
 
       <section className="featured">
         <div className="container">
-          <article style={{ backgroundImage: 'url(/images/featured-1.jpg)' }} className="featured-item featured-item-large">
+          <article style={{ backgroundImage: 'url(/images/featured-1.png)' }} className="featured-item featured-item-large">
             <div className="featured-item__content">
               <h3>Novidades!</h3>
               <a href="products" className="btn btn--rounded">Ver Mais</a>
             </div>
           </article>
 
-          <article style={{ backgroundImage: 'url(/images/featured-2.jpg)' }} className="featured-item featured-item-small-first">
+          <article style={{ backgroundImage: 'url(/images/featured-2.png)' }} className="featured-item featured-item-small-first">
             <div className="featured-item__content">
               <h3>Calças a partir de R$74,99</h3>
               <a href="products" className="btn btn--rounded">Ver Mais</a>
             </div>
           </article>
 
-          <article style={{ backgroundImage: 'url(/images/featured-3.jpg)' }} className="featured-item featured-item-small">
+          <article style={{ backgroundImage: 'url(/images/featured-3.png)' }} className="featured-item featured-item-small">
             <div className="featured-item__content">
               <h3>Ofertas de Inverno</h3>
               <a href="products" className="btn btn--rounded">Ver Mais</a>
