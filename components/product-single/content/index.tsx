@@ -4,10 +4,10 @@ import productsColors from './../../../utils/data/products-colors';
 import CheckboxColor from './../../products-filter/form-builder/checkbox-color';
 import { useDispatch, useSelector } from 'react-redux';
 import { some } from 'lodash';
-// import { addProduct } from 'store/reducers/cart';
+import { addProduct } from 'store/reducers/cart';
 import { toggleFavProduct } from 'store/reducers/user';
 import { ProductType } from 'types';
-// import { ProductStoreType } from 'types';
+import { ProductStoreType } from 'types';
 import { RootState } from 'store';
 
 type ProductContent = {
@@ -39,24 +39,24 @@ const Content = ({ product }: ProductContent) => {
     window.location.href = (`https://wa.me/5519984520307?text=Ol%C3%A1,%20tudo%20bem?%20Me%20interessei%20por%20este%20produto - ${product.name}`)
   }
 
-  // const addToCart = () => {
-  //   const productToSave: ProductStoreType = {
-  //     id: product.id,
-  //     name: product.name,
-  //     thumb: product.images ? product.images[0] : '',
-  //     price: product.currentPrice,
-  //     count: count,
-  //     color: color,
-  //     size: itemSize
-  //   }
+  const addToCart = () => {
+    const productToSave: ProductStoreType = {
+      id: product.id,
+      name: product.name,
+      thumb: product.images ? product.images[0] : '',
+      price: product.currentPrice,
+      count: count,
+      color: color,
+      size: itemSize
+    }
 
-  //   const productStore = {
-  //     count,
-  //     product: productToSave
-  //   }
+    const productStore = {
+      count,
+      product: productToSave
+    }
 
-  //   dispatch(addProduct(productStore));
-  // }
+    dispatch(addProduct(productStore));
+  }
 
   return (
     <section className="product-content">
@@ -116,7 +116,7 @@ const Content = ({ product }: ProductContent) => {
             </div>
 
             <button type="submit" onClick={() => addToWhatsApp()} className="btn btn--rounded btn--yellow">Solicitar via WhatsApp</button>
-            {/* <button type="submit" onClick={() => addToCart()} className="btn btn--rounded btn--yellow" disabled>Adicionar ao Carrinho</button> */}
+            {<button type="submit" onClick={() => addToCart()} className="btn btn--rounded btn--yellow" disabled>Adicionar ao Carrinho</button>}
             <button type="button" onClick={toggleFav} className={`btn-heart ${isFavourite ? 'btn-heart--active' : ''}`}><i className="icon-heart"></i></button>
           </div>
         </div>
